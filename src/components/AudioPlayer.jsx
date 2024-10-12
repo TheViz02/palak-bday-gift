@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 
 function AudioPlayer() {
+    const audioPath = "https://theviz02.github.io/palak-bday-gift/bg-music.mp3";
     // State to track if audio is playing
     const [isPlaying, setIsPlaying] = useState(false);
 
@@ -63,7 +64,7 @@ function AudioPlayer() {
             </button>
 
             {/* Hidden audio element */}
-            <audio ref={audioRef} src="/bg-music.mp3" />
+            <audio ref={audioRef} src={audioPath ?? "/bg-music.mp3"} />
         </div>
     );
 }

@@ -28,7 +28,7 @@ export default function MessageBox() {
 
         const intervalId = setInterval(() => {
             setMessage(getRandomMessage());
-        }, 3500); // Change the interval as desired
+        }, 2500); // Change the interval as desired
 
         // Cleanup function to clear the interval
         return () => clearInterval(intervalId);
