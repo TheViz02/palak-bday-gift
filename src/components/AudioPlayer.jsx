@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 
-function AudioPlayer() {
+export default function AudioPlayer() {
+    // const audioPath = "bg-music.mp3";
     const audioPath = "https://theviz02.github.io/palak-bday-gift/bg-music.mp3";
     // State to track if audio is playing
     const [isPlaying, setIsPlaying] = useState(false);
@@ -18,6 +19,7 @@ function AudioPlayer() {
                 setIsPlaying(true); // Update state to reflect audio is playing
             } catch (error) {
                 console.log("Failed to play audio: ", error);
+                setIsPlaying(false); // Update state to reflect audio is playing
             }
         }
         setIsPlaying(!isPlaying); // Toggle the state
@@ -68,5 +70,3 @@ function AudioPlayer() {
         </div>
     );
 }
-
-export default AudioPlayer;

@@ -1,18 +1,7 @@
 import { useEffect, useState } from "react";
+import { personName, messages } from "../assets/config.json";
 
 export default function MessageBox() {
-    const messages = [
-        "You're the light of my life 🌟",
-        "Every day with you is a blessing ❤️",
-        "I love you more than words can express 💕",
-        "You're my world and my everything 🌍",
-        "Together, forever and always 💖",
-        "You're the woman who cherished me 🤗",
-        "Being with you feels like I'm in best moment of my life 🌏",
-        "You're my comfort zone 💓",
-        "Words in dictionary can't define you 📚 😍",
-    ];
-
     // State to hold the current message
     const [message, setMessage] = useState("");
 
@@ -37,9 +26,9 @@ export default function MessageBox() {
     return (
         <div className="bg-white w-full max-w-xl p-8 sm:p-16 md:p-20 rounded-xl shadow-2xl text-center">
             <h3 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-4">
-                Happy Birthday Palak ❤️ 🎂 🥂 ✨
+                Happy Birthday {personName?.trim()} ❤️ 🎂 🥂 ✨
             </h3>
-            <p className="text-base sm:text-lg text-gray-600 italic mb-6">
+            <p className="text-base sm:text-lg text-gray-800 italic mb-6">
                 &ldquo;{message}&ldquo;
             </p>
             {/* <button

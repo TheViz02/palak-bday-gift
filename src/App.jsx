@@ -35,11 +35,6 @@ function App() {
 
         // Adding the event listener to the document
         document.addEventListener("click", handleUserInteraction);
-
-        // Cleanup the event listener on component unmount
-        return () => {
-            document.removeEventListener("click", handleUserInteraction);
-        };
     }, []);
 
     return (
